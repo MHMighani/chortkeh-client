@@ -11,5 +11,5 @@ export const getDayPrice = () => async(dispatch) => {
 export const addToInventory = formValues => async(dispatch) => {
     dispatch({type:types.ADD_TO_INVENTORY,payload:formValues})
 
-    history.push("/")
+    history.push(process.env.PUBLIC_URL + "/")
 }

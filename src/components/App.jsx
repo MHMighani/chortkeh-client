@@ -7,8 +7,8 @@ import history from '../history'
 export default function App() {
     return (
         <Router history={history}>
-            <Route exact path="/" component={Inventory} />
-            <Route exact path="/addInventory" component={AddInventory} />
+            <Route exact path={process.env.PUBLIC_URL + "/"} component={Inventory} />
+            <Route exact path={process.env.PUBLIC_URL + "/addInventory"} component={AddInventory} />
         </Router>
     )
 }

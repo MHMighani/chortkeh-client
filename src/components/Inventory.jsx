@@ -39,8 +39,8 @@ const InventoryTableBody = ({ inventoryList, allTodayPrices, labelTranslations,a
 	return (
 		<tbody>
 			{tableBody}
-			<th>ارزش کل</th>
-			<td scope="row">{allInventoryValue}</td>
+			<th scope="row">ارزش کل</th>
+			<td>{allInventoryValue}</td>
 			
 		</tbody>
 	)
@@ -94,7 +94,7 @@ class Inventory extends Component {
 		return (
 			<div className="container mt-5">
 				{this.renderContent()}
-				<Link to="/addInventory" className="btn btn-primary my-2">
+				<Link to={process.env.PUBLIC_URL + "/addInventory"} className="btn btn-primary my-2">
 					اضافه کردن دارایی
 				</Link>
 			</div>
