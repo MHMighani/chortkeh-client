@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/chortkeh/static/js/main.2b3bc596.chunk.js",
+    "main.js.map": "/chortkeh/static/js/main.2b3bc596.chunk.js.map",
+    "runtime-main.js": "/chortkeh/static/js/runtime-main.ff247a2f.js",
+    "runtime-main.js.map": "/chortkeh/static/js/runtime-main.ff247a2f.js.map",
+    "static/js/2.f6147c10.chunk.js": "/chortkeh/static/js/2.f6147c10.chunk.js",
+    "static/js/2.f6147c10.chunk.js.map": "/chortkeh/static/js/2.f6147c10.chunk.js.map",
+    "index.html": "/chortkeh/index.html",
+    "precache-manifest.b46f7cf069a96fac5e351f5a0ba70fa6.js": "/chortkeh/precache-manifest.b46f7cf069a96fac5e351f5a0ba70fa6.js",
+    "service-worker.js": "/chortkeh/service-worker.js",
+    "static/js/2.f6147c10.chunk.js.LICENSE.txt": "/chortkeh/static/js/2.f6147c10.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ff247a2f.js",
+    "static/js/2.f6147c10.chunk.js",
+    "static/js/main.2b3bc596.chunk.js"
+  ]
+}
