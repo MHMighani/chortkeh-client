@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/chortkeh-client/static/js/main.2b3bc596.chunk.js",
-    "main.js.map": "/chortkeh-client/static/js/main.2b3bc596.chunk.js.map",
+    "main.js": "/chortkeh-client/static/js/main.fe98f2d2.chunk.js",
+    "main.js.map": "/chortkeh-client/static/js/main.fe98f2d2.chunk.js.map",
     "runtime-main.js": "/chortkeh-client/static/js/runtime-main.22934961.js",
     "runtime-main.js.map": "/chortkeh-client/static/js/runtime-main.22934961.js.map",
     "static/js/2.f6147c10.chunk.js": "/chortkeh-client/static/js/2.f6147c10.chunk.js",
     "static/js/2.f6147c10.chunk.js.map": "/chortkeh-client/static/js/2.f6147c10.chunk.js.map",
     "index.html": "/chortkeh-client/index.html",
-    "precache-manifest.f3809f9cd1a1e12f6b5b8ee5c06d667c.js": "/chortkeh-client/precache-manifest.f3809f9cd1a1e12f6b5b8ee5c06d667c.js",
+    "precache-manifest.8dcc2ed5bfab5228d3cf6a1a115f5ee4.js": "/chortkeh-client/precache-manifest.8dcc2ed5bfab5228d3cf6a1a115f5ee4.js",
     "service-worker.js": "/chortkeh-client/service-worker.js",
     "static/js/2.f6147c10.chunk.js.LICENSE.txt": "/chortkeh-client/static/js/2.f6147c10.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.22934961.js",
     "static/js/2.f6147c10.chunk.js",
-    "static/js/main.2b3bc596.chunk.js"
+    "static/js/main.fe98f2d2.chunk.js"
   ]
 }
