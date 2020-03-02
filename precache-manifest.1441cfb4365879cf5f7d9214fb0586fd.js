@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "97c3279333f01fb000b4c154092c7079",
+    "revision": "10958f2608257007240a058330dea726",
     "url": "/chortkeh-client/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/chortkeh-client/static/js/2.f6147c10.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ceb88dafc56189f46223",
-    "url": "/chortkeh-client/static/js/main.fe98f2d2.chunk.js"
+    "revision": "c0130fa230ac7a484dd8",
+    "url": "/chortkeh-client/static/js/main.8eeec8f8.chunk.js"
   },
   {
     "revision": "458423ea05c168292c91",
