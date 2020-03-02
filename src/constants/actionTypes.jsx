@@ -1,0 +1,2 @@
+export const GET_DAY_PRICE = "GET_DAY_PRICE"
+export const ADD_TO_INVENTORY = "ADD_TO_INVENTORY"
