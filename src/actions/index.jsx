@@ -13,3 +13,7 @@ export const addToInventory = formValues => async(dispatch) => {
 
     history.push(process.env.PUBLIC_URL + "/")
 }
+
+export const deleteFromInventory = subSource => async(dispatch) => {
+    dispatch({type:types.DELETE_FROM_INVENTORY, payload:subSource})
+}

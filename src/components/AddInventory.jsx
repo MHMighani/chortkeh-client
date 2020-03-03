@@ -5,8 +5,6 @@ import { addToInventory } from '../actions';
 
 class AddInventory extends Component {
 	handleSubmit = formValues => {
-		console.log(formValues);
-
 		this.props.addToInventory(formValues);
 	};
 
