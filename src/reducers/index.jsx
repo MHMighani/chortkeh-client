@@ -9,5 +9,5 @@ export default combineReducers({
     inventoryLabels,
     labelTranslations,
     allTodayPrices,
-    inventoryReducer
+    inventoryList:inventoryReducer
 })

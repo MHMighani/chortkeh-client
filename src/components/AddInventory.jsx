@@ -10,8 +10,8 @@ class AddInventory extends Component {
 
 	render() {
 		return (
-			<div className="bg-primary">
-				<div className="container px-5 bg-light w-50 justify-content-center align-items-center ">
+			<div>
+				<div>
 					<AddInventoryForm
 						onSubmit={this.handleSubmit}
 						initialValues={{ amount: 0, mainSource: '', subSource: '' }}

@@ -1,8 +1,8 @@
 export const inventoryLabels = () => {
   const labels = {
-    "سکه": ["تمام سکه", "نیم سکه", "ربع سکه"],
-    "ارز": ["دلار آمریکا", "یورو"],
-    "دیگر منابع": ["بورس"]
+    "Gold": ["1 Emami", "1/2 Azadi", "1/4 Azadi"],
+    "Currency": ["US Dollar", "Euro"],
+    "others": ["stock"]
   };
 
   return labels;
@@ -10,15 +10,15 @@ export const inventoryLabels = () => {
 
 export const labelTranslations = () => {
   const translations = {
-    "سکه":"Gold",
-    "تمام سکه":"1 Emami",
-    "نیم سکه":"1/2 Azadi",
-    "ربع سکه":"1/4 Azadi",
-    "ارز":"Currency",
-    "دلار آمریکا":"US Dollar",
-    "یورو":"Euro",
-    "دیگر منابع":"others",
-    "بورس":"stock"
+    "Gold":"سکه",
+    "1 Emami":"تمام سکه",
+    "1/2 Azadi":"نیم سکه",
+    "1/4 Azadi":"ربع سکه",
+    "Currency":"ارز",
+    "US Dollar":"دلار آمریکا",
+    "Euro":"یورو",
+    "others":"دیگر منابع",
+    "stock":"بورس"
   };
 
   return translations;
