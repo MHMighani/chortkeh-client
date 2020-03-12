@@ -14,24 +14,24 @@ const Calculator = ({ subSource, amount }) => {
 	totalPrice = todayPrice * amount;
 
 	return (
-		<div>
-			<div>
+		<div id="calculator" className="form-section">
+			<div className="price-wrapper">
 				<span>قیمت روز</span>
 				<span>{numberWithCommas(todayPrice)}</span>
 			</div>
-			<div>
+			<div className="price-wrapper">
 				<div>
 					<i className="fas fa-times" />
 				</div>
 			</div>
-			<div>
+			<div className="price-wrapper">
 				<span>تعداد</span>
 				<span>{numberWithCommas(amount)}</span>
 			</div>
-			<div>
+			<div className="price-wrapper">
 				<hr />
 			</div>
-			<div>
+			<div className="price-wrapper">
 				<span>قیمت کل</span>
 				<span >{numberWithCommas(totalPrice)}</span>
 			</div>

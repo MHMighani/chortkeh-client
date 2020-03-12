@@ -10,13 +10,11 @@ class AddInventory extends Component {
 
 	render() {
 		return (
-			<div>
-				<div>
-					<AddInventoryForm
-						onSubmit={this.handleSubmit}
-						initialValues={{ amount: 0, mainSource: '', subSource: '' }}
-					/>
-				</div>
+			<div className="form-page">
+				<AddInventoryForm
+					onSubmit={this.handleSubmit}
+					initialValues={{ amount: 0, mainSource: '', subSource: '' }}
+				/>
 			</div>
 		);
 	}
