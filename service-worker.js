@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/chortkeh-client/precache-manifest.932065a42dbd1866427894723bb0daae.js"
+  "/chortkeh-client/precache-manifest.c81da23449d5601a9e65a782d5f19263.js"
 );
 
 self.addEventListener('message', (event) => {
