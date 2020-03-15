@@ -1,14 +1,12 @@
-import React from 'react'
+import React from 'react';
 
 const NoInventoryWarning = () => {
-    const message = "هنوز چیزی به دارایی اضافه نکرده اید"
-    return (
-        <div>
-            <div>
-                <p>{message}</p>
-            </div>
-        </div>
-    )
-}
+	const message = '!هنوز چیزی به دارایی اضافه نکرده اید';
+	return (
+		<div id="no-inventory-warning">
+			<p>{message}</p>
+		</div>
+	);
+};
 
-export default NoInventoryWarning
+export default NoInventoryWarning;
