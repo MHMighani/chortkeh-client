@@ -5,12 +5,12 @@ import AllInventoryValue from '../AllInventoryValue'
 
 const Table = () => {
     return(
-        <table className="table table-striped border">
+        <table className="table table-striped table-borderless">
             <TableHead />
             <TableBody />
             <tbody>
                 <tr>
-                    <td>ارزش کل دارایی : {AllInventoryValue()}</td>
+                    <td id="all-value" colSpan="2" >ارزش کل دارایی : {AllInventoryValue()}</td>
                 </tr>
             </tbody>
         </table>

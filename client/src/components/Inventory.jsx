@@ -15,19 +15,17 @@ class Inventory extends Component {
 		if (!inventoryList.length) {
 			return <NoInventoryWarning />;
 		} else {
-			return (
-				<div className="container mt-5">
-					<Table />
-				</div>
-			);
+			return <Table />;
 		}
 	};
 
 	render() {
 		return (
-			<div>
-				{this.renderContent()}
-				<Link to={process.env.PUBLIC_URL + '/addInventory'}>اضافه کردن دارایی</Link>
+			<div id="inventory-page">
+					{this.renderContent()}
+					<Link id="addInventoryLink" to={process.env.PUBLIC_URL + '/addInventory'}>
+						اضافه کردن دارایی
+					</Link>
 			</div>
 		);
 	}

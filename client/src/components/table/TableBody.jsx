@@ -11,11 +11,11 @@ const TableBody = props => {
 		
 		return (
 			<tr key={index}>
-				<td>
+				{/* <td>
 					<button className="btn btn-danger" onClick={() => deleteFromInventory(subSource)}>
 						Delete
 					</button>
-				</td>
+				</td> */}
 				<td>{numberWithCommas(parseInt(amount) * inventoryTodayValue)}</td>
 				<td>{numberWithCommas(inventoryTodayValue)}</td>
 				<td>{numberWithCommas(amount)}</td>
