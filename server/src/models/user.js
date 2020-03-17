@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const validator = require('validator')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
+const secretKey = require('../tokens')
 
 const userSchema = new mongoose.Schema({
     username:{
@@ -42,7 +43,7 @@ const userSchema = new mongoose.Schema({
 
 userSchema.methods.generateAuthToken = async function() {
     const user = this
-    const token = jwt.sign({_id:user._id.toString()},'thisismyapp')
+    const token = jwt.sign({_id:user._id.toString()},secretKey)
     user.tokens = user.tokens.concat({token})
     await user.save()
 
