@@ -3,6 +3,7 @@ const validator = require('validator')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const secretKey = require('../tokens')
+const Asset = require('./asset')
 
 const userSchema = new mongoose.Schema({
     username:{
@@ -41,6 +42,17 @@ const userSchema = new mongoose.Schema({
     }]
 })
 
+// filter what information is sent in response
+userSchema.methods.toJSON = function(){
+    const user = this
+    const userObject  = user.toObject()
+
+    delete userObject.password
+    delete userObject.tokens
+
+    return userObject
+}
+
 userSchema.methods.generateAuthToken = async function() {
     const user = this
     const token = jwt.sign({_id:user._id.toString()},secretKey)
@@ -73,6 +85,15 @@ userSchema.pre('save',async function(next){
     if(user.isModified('password')){
         user.password = await bcrypt.hash(user.password,8)
     }
+
+    next()
+})
+
+// deleting all assets owned by deleted user
+userSchema.pre('remove',async function(next){
+    const user = this
+
+    await Asset.deleteMany({owner:user._id})
 
     next()
 })

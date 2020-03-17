@@ -17,7 +17,14 @@ const assetSchema = new mongoose.Schema({
                 throw Error("amount should be greater than zero")
             }
         }
+    },
+    owner:{
+        type:mongoose.Schema.Types.ObjectId,
+        require:true,
+        ref:'user'
     }
+},{
+    timestamps:true
 })
 
 const Asset = mongoose.model('Asset',assetSchema)

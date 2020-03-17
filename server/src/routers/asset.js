@@ -1,11 +1,12 @@
 const Asset = require('../models/asset');
 const express = require('express');
 const router = new express.Router();
+const auth = require('../middleware/auth')
 
 // read all assets
-router.get('/assets', async (req, res) => {
+router.get('/assets',auth,async (req, res) => {
 	try{
-        const assets = await Asset.find({})
+        const assets = await Asset.find({owner:req.user._id})
         res.send(assets)
     }catch(e){
         res.status(500).send(e)
@@ -13,8 +14,11 @@ router.get('/assets', async (req, res) => {
 });
 
 // Creating an asset
-router.post('/assets', async (req, res) => {
-	const asset = new Asset(req.body);
+router.post('/assets', auth,async (req, res) => {
+	const asset = new Asset({
+		...req.body,
+		owner:req.user._id
+	});
 
 	try {
 		await asset.save();
@@ -25,9 +29,9 @@ router.post('/assets', async (req, res) => {
 });
 
 // delete an asset
-router.delete('/assets/:id', async (req, res) => {
+router.delete('/assets/:id', auth,async (req, res) => {
 	try {
-		const asset = await Asset.findByIdAndDelete({ _id: req.params.id });
+		const asset = await Asset.findOneAndDelete({ _id: req.params.id,owner:req.user._id });
 		if (!asset) {
 			return res.status(404).send();
 		}
@@ -38,16 +42,16 @@ router.delete('/assets/:id', async (req, res) => {
 });
 
 // updating an asset
-router.patch('/assets/:id', async (req, res) => {
+router.patch('/assets/:id', auth,async (req, res) => {
 	const updates = Object.keys(req.body);
-	const allowedUpdates = ['amount'];
+	const allowedUpdates = ['amount',"subCategory"];
 	const isInvalidOperation = updates.every(update => allowedUpdates.includes(update));
 
 	if (!isInvalidOperation) {
 		return res.status(400).send('ivalid update operation');
 	}
 	try {
-		const asset = await Asset.findOne({ _id: req.params.id });
+		const asset = await Asset.findOne({ _id: req.params.id,owner:req.user._id });
         if(!asset){
             return res.status(404).send()
         }
