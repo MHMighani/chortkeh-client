@@ -4,10 +4,18 @@ import { getDayPrice } from '../actions';
 import { connect } from 'react-redux';
 import NoInventoryWarning from './NoInventoryWarning';
 import Table from './table/Table';
+import Charts from './charts/Charts';
+
+import { getAssetsOfUserApi } from '../api/api';
+import { loginApi } from '../api/api';
+import AllInventoryValue from './AllInventoryValue';
 
 class Inventory extends Component {
-	componentDidMount() {
+	async componentDidMount() {
 		this.props.getDayPrice();
+
+		const loginResponse = await loginApi();
+		console.log(loginResponse);
 	}
 
 	renderContent = () => {
@@ -21,12 +29,15 @@ class Inventory extends Component {
 
 	render() {
 		return (
-			<div id="inventory-page">
+			<>
+				<div id="inventory-page">
 					{this.renderContent()}
 					<Link id="addInventoryLink" to={process.env.PUBLIC_URL + '/addInventory'}>
 						اضافه کردن دارایی
 					</Link>
-			</div>
+				</div>
+				<Charts />
+			</>
 		);
 	}
 }
