@@ -22,6 +22,7 @@ html, body, #root, #app {
           align-items: center;
   height: 100%;
   width: 100%;
+  min-height: 600px;
   background-color: #000080;
 }
 
@@ -51,7 +52,16 @@ html, body, #root, #app {
   }
 }
 
-.form-page button {
+.form-page .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border: none;
   border-radius: 15px;
   width: 100%;
@@ -102,8 +112,17 @@ html, body, #root, #app {
   background-color: blue;
 }
 
+#submit-btn:hover {
+  background-color: darkblue;
+}
+
 #return-btn {
   background-color: green;
+  text-decoration: none;
+}
+
+#return-btn:hover {
+  background-color: darkgreen;
 }
 
 select, input {
@@ -190,6 +209,10 @@ select, input {
   }
 }
 
+#no-inventory-warning p {
+  text-align: center;
+}
+
 #inventory-page {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -206,29 +229,24 @@ select, input {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100vh;
+  height: 100%;
+  width: 100%;
   padding: 1rem;
+  margin: 0;
   background-color: #87CEEB;
 }
 
 #inventory-page table {
+  max-width: 850px;
   background-color: white;
   border-radius: 15px;
 }
 
 #inventory-page table td, #inventory-page table th {
   text-align: center;
-}
-
-#inventory-page table #all-value {
+  padding: 1rem;
   text-align: left;
   padding-left: 2rem;
-}
-
-@media (min-width: 900px) {
-  #inventory-page table {
-    width: 75%;
-  }
 }
 
 #inventory-page #addInventoryLink {
@@ -241,5 +259,46 @@ select, input {
 #inventory-page #addInventoryLink:hover {
   text-decoration: none;
   background-color: darkblue;
+}
+
+.chart-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background-color: #ffe6e6;
+}
+
+.chart-page canvas {
+  margin: 1rem 0;
+  max-width: 500px;
+  -webkit-box-shadow: -2px 2px 10px grey;
+          box-shadow: -2px 2px 10px grey;
+  margin: 10px;
+  background: white;
+}
+
+@media (min-width: 900px) {
+  .chart-page {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 /*# sourceMappingURL=style.css.map */
