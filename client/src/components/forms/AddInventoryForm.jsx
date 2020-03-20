@@ -1,5 +1,6 @@
 import { Field, reduxForm, formValueSelector, change } from 'redux-form';
 import { addToInventory, getDayPrice } from '../../actions';
+import {Link} from 'react-router-dom'
 import { connect } from 'react-redux';
 import Calculator from '../Calculator';
 
@@ -86,8 +87,8 @@ class AddInventoryForm extends Component {
 				</div>
 				<Calculator subSource={subSource} amount={amount} />
 				<div className="btn-wrapper">
-					<button id="submit-btn" type="submit">تایید</button>
-					<button id="return-btn">بازگشت</button>
+					<button className="button" id="submit-btn" type="submit">تایید</button>
+					<Link className="button" to={`${process.env.PUBLIC_URL}`} id="return-btn" >بازگشت</Link>
 				</div>
 			</form>
 		);

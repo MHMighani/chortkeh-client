@@ -6,16 +6,9 @@ import NoInventoryWarning from './NoInventoryWarning';
 import Table from './table/Table';
 import Charts from './charts/Charts';
 
-import { getAssetsOfUserApi } from '../api/api';
-import { loginApi } from '../api/api';
-import AllInventoryValue from './AllInventoryValue';
-
 class Inventory extends Component {
 	async componentDidMount() {
 		this.props.getDayPrice();
-
-		const loginResponse = await loginApi();
-		console.log(loginResponse);
 	}
 
 	renderContent = () => {

@@ -6,7 +6,12 @@ export default (state={"stock":{"Buy":1}},action) => {
         case types.GET_DAY_PRICE:
             const currencyPrices = _.keyBy(action.payload["Currency"],"Currency")
             const goldPrices = _.keyBy(action.payload["Gold"],"Coin")
-            const allPrices = {...state,...currencyPrices,...goldPrices}
+            let cryptoPrices = _.keyBy(action.payload["Crypto"],"Currency")
+
+            // converting bitcoin price from Dollar to Toman
+            cryptoPrices["BitCoin"]["Buy"] = cryptoPrices["BitCoin"]["Buy"] * currencyPrices["US Dollar"]["Buy"]
+
+            const allPrices = {...state,...currencyPrices,...goldPrices,...cryptoPrices}
             
             return allPrices
         default:
