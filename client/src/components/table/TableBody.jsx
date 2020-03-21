@@ -16,11 +16,12 @@ const TableBody = props => {
 						Delete
 					</button>
 				</td> */}
-				<td>{numberWithCommas(parseInt(amount) * inventoryTodayValue)}</td>
-				<td>{numberWithCommas(inventoryTodayValue)}</td>
-				<td>{numberWithCommas(amount)}</td>
+				<th scope="row" className="row-num">{index + 1}</th>
 				<td>{labelTranslations[subSource]}</td>
-				<th scope="row">{index + 1}</th>
+				<td>{numberWithCommas(amount)}</td>
+				<td>{numberWithCommas(inventoryTodayValue)}</td>
+				<td>{numberWithCommas(parseInt(amount) * inventoryTodayValue)}</td>
+				
 			</tr>
 		);
 	});

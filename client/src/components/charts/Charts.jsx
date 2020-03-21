@@ -4,17 +4,21 @@ import PieChart from './PieChart';
 import LineChart from './LineChart';
 
 const Charts = props => {
-	if(!props.inventoryList.length){
-		return null
+	if (!props.inventoryList.length) {
+		return null;
 	}
 	return (
 		<div className="chart-page">
-			<PieChart
-				allTodayPrices={props.allTodayPrices}
-				inventoryList={props.inventoryList}
-				labelTranslations={props.labelTranslations}
-			/>
-			<LineChart />
+			<div className="chart-container">
+				<PieChart
+					allTodayPrices={props.allTodayPrices}
+					inventoryList={props.inventoryList}
+					labelTranslations={props.labelTranslations}
+				/>
+			</div>
+			{/* <div className="chart-container"> */}
+				{/* <LineChart /> */}
+			{/* </div> */}
 		</div>
 	);
 };

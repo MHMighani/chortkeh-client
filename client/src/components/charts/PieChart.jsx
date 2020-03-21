@@ -8,6 +8,15 @@ const PieChart = props => {
 	const values = props.inventoryList.map(asset => (parseInt(props.allTodayPrices[asset.subSource].Buy) * parseInt(asset.amount)))
 	const colors = randomColor({count:6})
 	
+	const options = {
+		maintainAspectRatio: false,
+		legend:{
+			labels:{
+				fontSize:22
+			}
+		}
+	}
+
 	const data = {
         labels,
         datasets: [{
@@ -19,7 +28,7 @@ const PieChart = props => {
     }
 	return (
 		<>
-			<Doughnut data={data} />
+			<Doughnut data={data} options={options} />
 		</>
 	);
 };
