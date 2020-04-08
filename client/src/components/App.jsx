@@ -3,8 +3,12 @@ import { Route, Router } from 'react-router-dom';
 import AddInventory from './AddInventory';
 import Inventory from './Inventory';
 import history from '../history';
+import {library} from '@fortawesome/fontawesome-svg-core'
+import {faTimes,faEdit} from '@fortawesome/free-solid-svg-icons'
 
 import '../stylesheets/style.css'
+
+library.add(faTimes,faEdit)
 
 export default function App() {
 	return (
