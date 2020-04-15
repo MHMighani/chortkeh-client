@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {reset} from 'redux-form'
+import { change,untouch } from 'redux-form'
 import AddInventoryForm from './forms/AddInventoryForm';
 import { addToInventory } from '../actions';
 import toast from 'toasted-notes'
@@ -10,7 +10,8 @@ class AddInventory extends Component {
 	handleSubmit = (formValues,dispatch) => {
 		this.props.addToInventory(formValues);
 		
-		dispatch(reset('addInventoryForm'))
+		dispatch(change('addInventoryForm','amount',''))
+		dispatch(untouch('addInventoryForm','amount',''))
 
 		toast.notify('به دارایی اضافه شد',{
 			duration:2000
