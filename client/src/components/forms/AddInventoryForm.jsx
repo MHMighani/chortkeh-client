@@ -1,23 +1,23 @@
-import { Field, reduxForm, formValueSelector, change } from 'redux-form';
-import { addToInventory, getDayPrice } from '../../actions';
-import {Link} from 'react-router-dom'
-import { connect } from 'react-redux';
-import Calculator from '../Calculator';
-
 import React, { Component } from 'react';
+import { Field, reduxForm, formValueSelector, change } from 'redux-form';
+import { getDayPrice } from '../../actions';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+
+import AddSourceForm from '../forms/AddSourceForm';
+import RenderInput from './RenderInput';
+import RenderError from './RenderError';
+import Calculator from '../Calculator';
+import useModal from '../modals/useModal';
+import Modal from '../modals/Modal';
 
 class AddInventoryForm extends Component {
 	componentDidMount() {
 		this.props.getDayPrice();
 	}
 
-	renderError({ error, touched }) {
-		if (error && touched) {
-			return <div className="error-wraper">{error}</div>;
-		}
-	}
-
-	getSelectOptions = optionsList => {
+	getSelectOptions = (optionsList) => {
 		let options = optionsList.map((option, index) => (
 			<option key={index} value={option}>
 				{this.props.labelTranslations[option]}
@@ -27,36 +27,42 @@ class AddInventoryForm extends Component {
 	};
 
 	renderSelector = ({ input, label, meta, options }) => {
+		const { isShowing, toggle } = useModal();
+		let button;
+		if (this.props.mainSource === 'others' && input.name === 'subSource') {
+			button = (
+				<button onClick={toggle}>
+					<FontAwesomeIcon icon="plus" />
+				</button>
+			);
+		}
+
+		if (isShowing) {
+			return (
+				<Modal isShowing={isShowing} hide={toggle}>
+					<AddSourceForm />
+				</Modal>
+			);
+		}
+
 		return (
 			<div className="col-wrapper">
 				<div className="input-wrapper">
+					{button}
 					<select type="select" {...input}>
 						{options}
 					</select>
 					<label>{label}</label>
 				</div>
-				{this.renderError(meta)}
+				<RenderError error={meta.error} touched={meta.touched} />
 			</div>
-		);
-	};
-
-	renderInput = ({ input, label, meta }) => {
-		return (
-			<div className="col-wrapper">
-				<div className="input-wrapper">
-					<input min="0" type="number" {...input} />
-					<label>{label}</label>
-				</div>
-				{this.renderError(meta)}	
-			</div>
-			
 		);
 	};
 
 	// for rendering subSource label translation
-	renderSubSourceLabel = mainSource => {
+	renderSubSourceLabel = (mainSource) => {
 		if (mainSource === 'others') {
-			return 'منبع';
+			return '';
 		} else if (!mainSource) {
 			return '';
 		} else {
@@ -68,6 +74,7 @@ class AddInventoryForm extends Component {
 		const { handleSubmit, mainSource, subSource, amount } = this.props;
 		const mainSourceOptionsList = [...[''], ...Object.keys(this.props.inventoryLabels)];
 		const subSourceOptionsList = mainSource ? [...[''], ...this.props.inventoryLabels[mainSource]] : [''];
+
 		return (
 			<form onSubmit={handleSubmit(this.props.onSubmit)}>
 				<div className="form-section">
@@ -83,12 +90,16 @@ class AddInventoryForm extends Component {
 						component={this.renderSelector}
 						options={this.getSelectOptions(subSourceOptionsList)}
 					/>
-					<Field name="amount" label="مقدار" component={this.renderInput} />
+					<Field name="amount" label="مقدار" type="number" component={RenderInput} />
 				</div>
 				<Calculator subSource={subSource} amount={amount} />
 				<div className="btn-wrapper">
-					<button className="button" id="submit-btn" type="submit">تایید</button>
-					<Link className="button" to={`${process.env.PUBLIC_URL}`} id="return-btn" >بازگشت</Link>
+					<button className="button" id="submit-btn" type="submit">
+						تایید
+					</button>
+					<Link className="button" to={`${process.env.PUBLIC_URL}`} id="return-btn">
+						بازگشت
+					</Link>
 				</div>
 			</form>
 		);
@@ -97,7 +108,7 @@ class AddInventoryForm extends Component {
 
 const selector = formValueSelector('addInventoryForm');
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
 	return {
 		inventoryLabels: state.inventoryLabels,
 		labelTranslations: state.labelTranslations,
@@ -107,7 +118,7 @@ const mapStateToProps = state => {
 	};
 };
 
-const validate = formValues => {
+const validate = (formValues) => {
 	const errors = {};
 
 	if (!formValues.mainSource) {
@@ -117,10 +128,11 @@ const validate = formValues => {
 	} else if (!parseInt(formValues.amount)) {
 		errors['amount'] = 'لطفا مقدار دارایی را مشخص کنید';
 	}
+
 	return errors;
 };
 
 export default reduxForm({
 	form: 'addInventoryForm',
 	validate,
-})(connect(mapStateToProps, { addToInventory, getDayPrice, change })(AddInventoryForm));
+})(connect(mapStateToProps, { getDayPrice, change })(AddInventoryForm));

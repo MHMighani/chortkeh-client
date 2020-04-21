@@ -1,4 +1,4 @@
-import { ADD_TO_INVENTORY, DELETE_FROM_INVENTORY } from '../constants/actionTypes';
+import { ADD_TO_INVENTORY, DELETE_FROM_INVENTORY,ADD_SOURCE} from '../constants/actionTypes';
 
 export default (state = [], action) => {
 	switch (action.type) {
@@ -14,9 +14,14 @@ export default (state = [], action) => {
 				});
 			}
 			return [...state, action.payload];
+
 		case DELETE_FROM_INVENTORY:
 			const newState = state.filter(inventory => inventory.subSource !== action.payload);
-			return newState;
+			return newState
+		
+		case ADD_SOURCE:
+			return [...state,{"mainSource":"others","subSource":action.payload.newSourceName}]
+
 		default:
 			return state;
 	}

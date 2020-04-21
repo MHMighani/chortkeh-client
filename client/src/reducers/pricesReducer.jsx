@@ -1,9 +1,9 @@
-import * as types from '../constants/actionTypes'
+import { GET_DAY_PRICE,ADD_SOURCE } from '../constants/actionTypes'
 import _ from 'lodash'
 
-export default (state={"stock":{"Buy":1}},action) => {
+export default (state={},action) => {
     switch(action.type){
-        case types.GET_DAY_PRICE:
+        case GET_DAY_PRICE:
             const currencyPrices = _.keyBy(action.payload["Currency"],"Currency")
             const goldPrices = _.keyBy(action.payload["Gold"],"Coin")
             let cryptoPrices = _.keyBy(action.payload["Crypto"],"Currency")
@@ -14,6 +14,8 @@ export default (state={"stock":{"Buy":1}},action) => {
             const allPrices = {...state,...currencyPrices,...goldPrices,...cryptoPrices}
             
             return allPrices
+        case ADD_SOURCE:
+            return {...state,...{[action.payload.newSourceName]:{"Buy":parseInt(action.payload.newSourceValue)}}}
         default:
             return state    
     }
