@@ -4,11 +4,12 @@ import AddInventory from './AddInventory';
 import Inventory from './Inventory';
 import history from '../history';
 import {library} from '@fortawesome/fontawesome-svg-core'
-import {faTimes,faEdit} from '@fortawesome/free-solid-svg-icons'
+import {faTimes,faEdit,faPlus} from '@fortawesome/free-solid-svg-icons'
+import AddSourceForm from './forms/AddSourceForm'
 
 import '../stylesheets/style.css'
 
-library.add(faTimes,faEdit)
+library.add(faTimes,faEdit,faPlus)
 
 export default function App() {
 	return (
@@ -16,7 +17,9 @@ export default function App() {
 			<Router history={history}>
 				<Route exact path={process.env.PUBLIC_URL + '/'} component={Inventory} />
 				<Route exact path={process.env.PUBLIC_URL + '/addInventory'} component={AddInventory} />
+				<Route exact path={process.env.PUBLIC_URL + '/addSource'} component={AddSourceForm} />
 			</Router>
+			
 		</div>
 	);
 }

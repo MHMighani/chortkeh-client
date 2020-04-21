@@ -1,5 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import numberWithCommas from '../NumberWithCommas';
 
 const Calculator = ({ subSource, amount }) => {
@@ -21,7 +23,7 @@ const Calculator = ({ subSource, amount }) => {
 			</div>
 			<div className="price-wrapper">
 				<div>
-					<i className="fas fa-times" />
+					<FontAwesomeIcon icon="times" />
 				</div>
 			</div>
 			<div className="price-wrapper">
