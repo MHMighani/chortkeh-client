@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/chortkeh-client/static/css/main.e9723340.chunk.css",
-    "main.js": "/chortkeh-client/static/js/main.65dde977.chunk.js",
-    "main.js.map": "/chortkeh-client/static/js/main.65dde977.chunk.js.map",
+    "main.css": "/chortkeh-client/static/css/main.ae0d403e.chunk.css",
+    "main.js": "/chortkeh-client/static/js/main.1183b7e7.chunk.js",
+    "main.js.map": "/chortkeh-client/static/js/main.1183b7e7.chunk.js.map",
     "runtime-main.js": "/chortkeh-client/static/js/runtime-main.22934961.js",
     "runtime-main.js.map": "/chortkeh-client/static/js/runtime-main.22934961.js.map",
     "static/css/2.dc646829.chunk.css": "/chortkeh-client/static/css/2.dc646829.chunk.css",
-    "static/js/2.099e080f.chunk.js": "/chortkeh-client/static/js/2.099e080f.chunk.js",
-    "static/js/2.099e080f.chunk.js.map": "/chortkeh-client/static/js/2.099e080f.chunk.js.map",
+    "static/js/2.fd6d77cf.chunk.js": "/chortkeh-client/static/js/2.fd6d77cf.chunk.js",
+    "static/js/2.fd6d77cf.chunk.js.map": "/chortkeh-client/static/js/2.fd6d77cf.chunk.js.map",
     "index.html": "/chortkeh-client/index.html",
-    "precache-manifest.7db1d42babff64dc50fdf0671866f162.js": "/chortkeh-client/precache-manifest.7db1d42babff64dc50fdf0671866f162.js",
+    "precache-manifest.63ea83b8d7b562070837a7077d8875ca.js": "/chortkeh-client/precache-manifest.63ea83b8d7b562070837a7077d8875ca.js",
     "service-worker.js": "/chortkeh-client/service-worker.js",
     "static/css/2.dc646829.chunk.css.map": "/chortkeh-client/static/css/2.dc646829.chunk.css.map",
-    "static/css/main.e9723340.chunk.css.map": "/chortkeh-client/static/css/main.e9723340.chunk.css.map",
-    "static/js/2.099e080f.chunk.js.LICENSE.txt": "/chortkeh-client/static/js/2.099e080f.chunk.js.LICENSE.txt",
-    "static/media/style.css": "/chortkeh-client/static/media/Sahel.b385ecfb.woff"
+    "static/css/main.ae0d403e.chunk.css.map": "/chortkeh-client/static/css/main.ae0d403e.chunk.css.map",
+    "static/js/2.fd6d77cf.chunk.js.LICENSE.txt": "/chortkeh-client/static/js/2.fd6d77cf.chunk.js.LICENSE.txt",
+    "static/media/style.scss": "/chortkeh-client/static/media/Sahel.b385ecfb.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.22934961.js",
     "static/css/2.dc646829.chunk.css",
-    "static/js/2.099e080f.chunk.js",
-    "static/css/main.e9723340.chunk.css",
-    "static/js/main.65dde977.chunk.js"
+    "static/js/2.fd6d77cf.chunk.js",
+    "static/css/main.ae0d403e.chunk.css",
+    "static/js/main.1183b7e7.chunk.js"
   ]
 }
