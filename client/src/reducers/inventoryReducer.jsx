@@ -18,9 +18,6 @@ export default (state = [], action) => {
 		case DELETE_FROM_INVENTORY:
 			const newState = state.filter(inventory => inventory.subSource !== action.payload);
 			return newState
-		
-		case ADD_SOURCE:
-			return [...state,{"mainSource":"others","subSource":action.payload.newSourceName}]
 
 		default:
 			return state;
