@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PieChart from './PieChart';
-import LineChart from './LineChart';
+import './style.scss';
 
 const Charts = props => {
 	if (!props.inventoryList.length) {
@@ -16,9 +16,6 @@ const Charts = props => {
 					labelTranslations={props.labelTranslations}
 				/>
 			</div>
-			{/* <div className="chart-container"> */}
-				{/* <LineChart /> */}
-			{/* </div> */}
 		</div>
 	);
 };

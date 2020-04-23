@@ -1,0 +1,21 @@
+@import '../../stylesheets/mixins';
+@import '../../stylesheets/variables';
+
+#no-inventory-warning {
+	@include flex-center;
+	width: 90%;
+	height: 25vh;
+	background-color: $no-inventory-background-color;
+	padding: $inventory-page-padding;
+	border-radius: $border-radius;
+	margin: 1rem;
+	font-size: 1.3rem;
+
+	@include for-desktop-up {
+		width: 50%;
+	}
+
+	p {
+		text-align: center;
+	}
+}

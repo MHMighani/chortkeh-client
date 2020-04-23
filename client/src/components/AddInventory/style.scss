@@ -1,0 +1,46 @@
+@import '../../stylesheets/mixins';
+@import '../../stylesheets/variables';
+
+.form-page {
+	@include flex-center;
+	height: 100%;
+	width: 100%;
+	min-height: 600px;
+	background-color: $form-page-background-color;
+
+	form {
+		@include flex-column;
+		height: 100%;
+		height: 95%;
+		width: 90%;
+		background-color: $form-background-color;
+		border-radius: $border-radius;
+
+		@include for-desktop-up {
+			width: 40%;
+		}
+	}
+
+	.button {
+		width: 100%;
+		height: 50px;
+		margin: 2px auto;
+		padding: $button-padding;
+		font-size: $button-font-size;
+		color: white;
+	}
+
+	#add-source-btn {
+		width: auto;
+		height: auto;
+		font-size: 1rem;
+		border-radius: 0;
+		margin: 0;
+		padding: 5px;
+		background-color: $add-source-background-color;
+
+		&:hover {
+			background-color: green;
+		}
+	}
+}

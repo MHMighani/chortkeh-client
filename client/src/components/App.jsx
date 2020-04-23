@@ -7,7 +7,7 @@ import {library} from '@fortawesome/fontawesome-svg-core'
 import {faTimes,faEdit,faPlus} from '@fortawesome/free-solid-svg-icons'
 import AddSourceForm from './forms/AddSourceForm'
 
-import '../stylesheets/style.css'
+import '../style.scss'
 
 library.add(faTimes,faEdit,faPlus)
 

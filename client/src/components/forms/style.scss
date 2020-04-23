@@ -1,0 +1,48 @@
+@import '../../stylesheets/mixins';
+@import '../../stylesheets/variables';
+
+.form-section {
+	border: $form-section-border;
+	border-radius: $border-radius;
+	padding: $section-padding;
+	font-size: 1.3rem;
+	width: 90%;
+
+	@include for-desktop-up {
+		width: 75%;
+	}
+}
+
+#submit-btn {
+	background-color: blue;
+
+	&:hover {
+		background-color: darkblue;
+	}
+}
+
+#return-btn {
+	background-color: green;
+	text-decoration: none;
+
+	&:hover {
+		background-color: darkgreen;
+	}
+}
+
+.input-wrapper {
+	@include flex-center;
+	justify-content: space-between;
+	margin: 5px;
+	width: 90%;
+
+	label {
+		width: 100px;
+		text-align: center;
+	}
+}
+
+.error-wraper {
+	text-align: center;
+	color: red;
+}

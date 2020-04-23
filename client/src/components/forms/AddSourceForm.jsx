@@ -1,10 +1,8 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
-import { Link } from 'react-router-dom'
 import RenderInput from './RenderInput';
 import { connect } from 'react-redux';
 import { addNewSource } from '../../actions'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class AddSourceForm extends React.Component {
 	onSubmit = (formValues) => {
@@ -24,9 +22,6 @@ class AddSourceForm extends React.Component {
 						<button>
 							تایید
 						</button>
-						{/* <Link to={process.env.PUBLIC_URL + '/addInventory'}>
-							<FontAwesomeIcon icon="times" />
-						</Link> */}
 					</div>
 				</div>
 			</form>

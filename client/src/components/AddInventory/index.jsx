@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { change,untouch } from 'redux-form'
-import AddInventoryForm from './forms/AddInventoryForm';
-import { addToInventory } from '../actions';
-import toast from 'toasted-notes'
-import 'toasted-notes/src/styles.css'
+import AddInventoryForm from '../forms/AddInventoryForm';
+import { addToInventory } from '../../actions';
+import toast from 'toasted-notes';
+
+import './style.scss';
+import 'toasted-notes/src/styles.css';
 
 class AddInventory extends Component {
 	handleSubmit = (formValues,dispatch) => {

@@ -3,6 +3,8 @@ import TableHead from './TableHead'
 import TableBody from './TableBody'
 import AllInventoryValue from '../AllInventoryValue'
 
+import './style.scss'
+
 const Table = () => {
     return(
         <table>

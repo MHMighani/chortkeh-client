@@ -5,12 +5,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import AddSourceForm from '../forms/AddSourceForm';
+import AddSourceForm from './AddSourceForm';
 import RenderInput from './RenderInput';
 import RenderError from './RenderError';
 import Calculator from '../Calculator';
 import useModal from '../modals/useModal';
 import Modal from '../modals/Modal';
+
+import './style.scss';
 
 class AddInventoryForm extends Component {
 	componentDidMount() {
@@ -31,7 +33,7 @@ class AddInventoryForm extends Component {
 		let button;
 		if (this.props.mainSource === 'others' && input.name === 'subSource') {
 			button = (
-				<button onClick={toggle}>
+				<button id="add-source-btn" className="button" onClick={toggle}>
 					<FontAwesomeIcon icon="plus" />
 				</button>
 			);

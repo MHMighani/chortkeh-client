@@ -2,7 +2,9 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import numberWithCommas from '../NumberWithCommas';
+import numberWithCommas from '../../NumberWithCommas';
+
+import './style.scss'
 
 const Calculator = ({ subSource, amount }) => {
 	let todayPrice = 0,

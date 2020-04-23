@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { getDayPrice } from '../actions';
+import { getDayPrice } from '../../actions';
 import { connect } from 'react-redux';
-import NoInventoryWarning from './NoInventoryWarning';
-import Table from './table/Table';
-import Charts from './charts/Charts';
+import NoInventoryWarning from '../NoInventoryWarning';
+import Table from '../table/Table';
+import Charts from '../charts/Charts';
+
+import './style.scss';
 
 class Inventory extends Component {
 	async componentDidMount() {
@@ -25,7 +27,7 @@ class Inventory extends Component {
 			<>
 				<div id="inventory-page">
 					{this.renderContent()}
-					<Link id="addInventoryLink" to={process.env.PUBLIC_URL + '/addInventory'}>
+					<Link className="button" id="addInventoryLink" to={process.env.PUBLIC_URL + '/addInventory'}>
 						اضافه کردن دارایی
 					</Link>
 				</div>

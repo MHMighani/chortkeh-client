@@ -1,0 +1,23 @@
+@import '../../stylesheets/mixins';
+@import '../../stylesheets/variables';
+
+#inventory-page {
+	@include flex-column;
+	justify-content: center;
+	min-height: 100vh;
+	width: 100%;
+	padding: 1rem;
+	margin: 0;
+
+	#addInventoryLink {
+		background-color: blue;
+		color: white;
+		padding: $inventory-page-padding;
+		border-radius: $button-border-radius;
+		margin: 1rem auto;
+		&:hover {
+			text-decoration: none;
+			background-color: darkblue;
+		}
+	}
+}

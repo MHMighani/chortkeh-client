@@ -1,0 +1,24 @@
+@import './stylesheets/variables';
+@import './stylesheets/basics';
+@import './stylesheets/fonts';
+@import './stylesheets/mixins';
+
+.button {
+	text-align: center;
+	text-decoration: none;
+	border: none;
+	border-radius: $button-border-radius;
+	cursor: pointer;
+}
+
+
+
+.btn-wrapper {
+	@include flex-column;
+	width: 75%;
+
+	@include for-desktop-up {
+		width: 50%;
+	}
+}
+
