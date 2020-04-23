@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import './Modal.css'
+import './Modal.scss'
 
 const Modal = ({ isShowing, hide, children }) =>
 	isShowing
 		? ReactDOM.createPortal(
 				<React.Fragment>
 					<div className="modal-overlay" />
-					<div className="modal-wrapper" aria-modal aria-hidden tabIndex={-1} role="dialog">
-						<div className="modal">
+					<div className="modal-wrapper" onClick={hide} aria-modal aria-hidden tabIndex={-1} role="dialog">
+						<div className="modal" onClick={e => e.stopPropagation()}>
 							<div className="modal-header">
 								<button
 									type="button"
