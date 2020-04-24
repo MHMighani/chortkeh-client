@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { change,untouch } from 'redux-form'
 import AddInventoryForm from '../forms/AddInventoryForm';
@@ -8,9 +8,9 @@ import toast from 'toasted-notes';
 import './style.scss';
 import 'toasted-notes/src/styles.css';
 
-class AddInventory extends Component {
-	handleSubmit = (formValues,dispatch) => {
-		this.props.addToInventory(formValues);
+const AddInventory = ({addToInventory}) => {
+	const handleSubmit = (formValues,dispatch) => {
+		addToInventory(formValues);
 		
 		dispatch(change('addInventoryForm','amount',''))
 		dispatch(untouch('addInventoryForm','amount',''))
@@ -20,16 +20,15 @@ class AddInventory extends Component {
 		})
 	};
 
-	render() {
+	
 		return (
 			<div className="form-page">
 				<AddInventoryForm
-					onSubmit={this.handleSubmit}
+					onSubmit={handleSubmit}
 					initialValues={{ amount: 0, mainSource: '', subSource: '' }}
 				/>
 			</div>
 		);
 	}
-}
 
 export default connect(null, { addToInventory })(AddInventory);
