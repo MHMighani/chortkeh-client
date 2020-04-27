@@ -8,9 +8,19 @@
 	span {
 		width: 100px;
 		text-align: center;
+		white-space: nowrap;
 	}
 
 	hr {
 		width: 100%;
+		margin:10px 0;
+	}
+
+	.unit-label{
+		display: inline-block;
+		color:gray;
+		font-size: 1rem;
+		align-self: center;
+		padding-right:10px;
 	}
 }

@@ -14,7 +14,7 @@ import './style.scss';
 const AddInventoryForm = (props) => {
 	useEffect(() => {
 		props.getDayPrice();
-	}, []);
+	});
 
 	const getSelectOptions = (optionsList) => {
 		let options = optionsList.map((option, index) => (

@@ -11,7 +11,7 @@ import './style.scss';
 const Inventory = ({getDayPrice,inventoryList}) => {
 	useEffect(() => {
 		getDayPrice();
-	}, []);
+	});
 
 	const renderContent = () => {
 		if (!inventoryList.length) {

@@ -36,7 +36,11 @@ const Calculator = ({ subSource, amount }) => {
 				<hr />
 			</div>
 			<div className="price-wrapper">
-				<span>قیمت کل</span>
+				<div>
+					<div className="unit-label">تومان</div>
+					<span>قیمت کل</span>
+				</div>
+				
 				<span >{numberWithCommas(totalPrice)}</span>
 			</div>
 		</div>
