@@ -11,8 +11,6 @@
 	cursor: pointer;
 }
 
-
-
 .btn-wrapper {
 	@include flex-column;
 	width: 75%;
@@ -22,3 +20,21 @@
 	}
 }
 
+.toast{
+	padding:1rem;
+	color:white;
+	border-radius:10px;
+}
+
+.warning-tost{
+	background-color:rgba(235, 43, 43, 0.877);
+}
+
+.success-toast{
+	background-color:rgba(0, 128, 0, 0.877);
+}
+
+select{
+	font-size: 1.1rem;
+	font-family: sahel;
+}

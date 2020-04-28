@@ -21,7 +21,11 @@ export const deleteFromInventory = subSource => async dispatch => {
 	dispatch({ type: types.DELETE_FROM_INVENTORY, payload: subSource });
 };
 
-export const addNewSource = formValues => async dispatch => {
-	dispatch({type: types.ADD_SOURCE, payload: formValues})
-	history.push(`${process.env.PUBLIC_URL}`)
+export const addNewSource = formValues => async (dispatch,getState) => {
+	const {allTodayPrices} = getState();
+	if(Object.keys(allTodayPrices).includes(formValues.newSourceName)){
+		return 1
+	}
+	dispatch({type: types.ADD_SOURCE, payload: formValues});
+	history.push(`${process.env.PUBLIC_URL}`);
 }

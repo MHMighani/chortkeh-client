@@ -15,7 +15,7 @@ const AddInventory = ({addToInventory}) => {
 		dispatch(change('addInventoryForm','amount',''))
 		dispatch(untouch('addInventoryForm','amount',''))
 
-		toast.notify('به دارایی اضافه شد',{
+		toast.notify(() => <div className="toast success-toast">به دارایی اضافه شد</div>,{
 			duration:2000
 		})
 	};
