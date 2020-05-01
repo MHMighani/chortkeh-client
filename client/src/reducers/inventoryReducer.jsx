@@ -1,4 +1,4 @@
-import { ADD_TO_INVENTORY, DELETE_FROM_INVENTORY,ADD_SOURCE} from '../constants/actionTypes';
+import { ADD_TO_INVENTORY, DELETE_FROM_INVENTORY} from '../constants/actionTypes';
 
 export default (state = [], action) => {
 	switch (action.type) {
