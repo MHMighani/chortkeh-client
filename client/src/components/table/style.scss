@@ -1,87 +1,102 @@
 table {
-    width: 80%;
-    border-collapse: collapse;
+	width: 80%;
+	border-collapse: collapse;
 
-    tr:nth-of-type(odd) {
-        background: #eee;
-    }
+	tr:nth-of-type(odd) {
+		background: #eee;
+	}
 
-    tr {
-        border-bottom: 1px solid lightgrey;
-    }
+	tr {
+		border-bottom: 1px solid lightgrey;
+	}
 
-    th {
-        background: white;
-        font-weight: bold;
-    }
+	th {
+		background: white;
+		font-weight: bold;
+	}
 
-    td,
-    th {
-        padding: 1rem;
-        text-align: center;
-    }
+	td,
+	th {
+		padding: 1rem;
+		text-align: center;
+	}
 
-    #all-value:before {
-        content: 'ارزش کل داریی(تومان)';
-        padding-left: 35px;
-    }
+	.button {
+		border-radius: 5px;
+		color: white;
 
-    @media only screen and (max-width: 760px) {
-        width: 100%;
-        table,
-        thead,
-        tbody,
-        th,
-        td,
-        tr {
-            display: block;
-        }
+		&:hover {
+			color: black;
+		}
+	}
 
-        thead tr {
-            position: absolute;
-            top: -9999px;
-            left: -9999px;
-        }
+	.table-delete-btn {
+		background-color: red;
+	}
 
-        tr {
-            border: 1px solid #ccc;
-        }
+	.table-edit-btn {
+		background-color: lightgreen;
+	}
 
-        td {
-            border: none;
-            border-bottom: 1px solid #eee;
-            position: relative;
-            padding-left: 50%;
-        }
+	#all-value:before {
+		content: 'ارزش کل داریی(تومان)';
+	}
+	@media only screen and (max-width: 760px) {
+		width: 100%;
+		table,
+		thead,
+		tbody,
+		th,
+		td,
+		tr {
+			display: block;
+		}
 
-        td:before {
-            position: absolute;
-            top: 6px;
-            left: 6px;
-            width: 45%;
-            padding-right: 10px;
-            white-space: nowrap;
-        }
+		thead tr {
+			position: absolute;
+			top: -9999px;
+			left: -9999px;
+		}
 
-        #all-value:before {
-            padding-left: 2px;
-        }
+		tr {
+			border: 1px solid #ccc;
+		}
 
-        td:nth-of-type(1):before {
-            content: 'منبع';
-        }
-        td:nth-of-type(2):before {
-            content: 'مقدار';
-        }
-        td:nth-of-type(3):before {
-            content: 'قیمت روز';
-        }
-        td:nth-of-type(4):before {
-            content: 'قیمت کل';
-        }
+		td {
+			border: none;
+			border-bottom: 1px solid #eee;
+			position: relative;
+			padding-left: 50%;
+		}
 
-        .row-num {
-            display: none;
-        }
-    }
+		td:before {
+			position: absolute;
+			top: 6px;
+			left: 6px;
+			width: 45%;
+			padding-right: 10px;
+			white-space: nowrap;
+		}
+
+		#all-value:before {
+			padding-left: 2px;
+		}
+
+		td:nth-of-type(1):before {
+			content: 'منبع';
+		}
+		td:nth-of-type(2):before {
+			content: 'مقدار';
+		}
+		td:nth-of-type(3):before {
+			content: 'قیمت روز';
+		}
+		td:nth-of-type(4):before {
+			content: 'قیمت کل';
+		}
+
+		.row-num {
+			display: none;
+		}
+	}
 }

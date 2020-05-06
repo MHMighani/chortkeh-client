@@ -5,7 +5,7 @@ import ChartFilter from './ChartFilter';
 import './style.scss';
 
 const Charts = (props) => {
-	const [chartFormat, setChartFormat] = useState('mainSource');
+	const [chartFormat, setChartFormat] = useState('subSource');
 
 	const getValuesAndLabels = () => {
 		let inventoryObj = {};

@@ -1,5 +1,6 @@
 @import '../../stylesheets/mixins';
 @import '../../stylesheets/variables';
+@import '../../stylesheets/fonts';
 
 .form-section {
 	border: $form-section-border;
@@ -15,6 +16,7 @@
 
 #submit-btn {
 	background-color: blue;
+	// font-family: sahel;
 
 	&:hover {
 		background-color: darkblue;

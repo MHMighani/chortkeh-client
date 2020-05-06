@@ -1,6 +1,5 @@
 import * as types from '../constants/actionTypes';
 import { getPricesApi, getBitCoinPrice } from '../api/api';
-import history from '../history'
 
 export const getDayPrice = () => async dispatch => {
 	const dayPrices = await getPricesApi();
@@ -23,9 +22,8 @@ export const deleteFromInventory = subSource => async dispatch => {
 
 export const addNewSource = formValues => async (dispatch,getState) => {
 	const {allTodayPrices} = getState();
-	if(Object.keys(allTodayPrices).includes(formValues.newSourceName)){
+	if(formValues.newSourceName in allTodayPrices){
 		return 1
 	}
 	dispatch({type: types.ADD_SOURCE, payload: formValues});
-	history.push(`${process.env.PUBLIC_URL}`);
 }

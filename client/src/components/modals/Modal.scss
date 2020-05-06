@@ -36,6 +36,13 @@
 	border-radius: 3px;
 	max-width: 500px;
 	padding: 2rem;
+
+	.button {
+		border: none;
+		padding: 0.3rem 1rem;
+		margin-left: 0.5rem;
+		font-size: 1rem;
+	}
 }
 
 .modal-header {
@@ -44,25 +51,12 @@
 }
 
 .modal-close-button {
-	font-size: 1.4rem;
+	font-size: 1.3rem;
 	font-weight: 700;
+	padding:8px;
 	line-height: 1;
 	color: #000;
 	opacity: 0.3;
 	cursor: pointer;
 	border: none;
-}
-
-button {
-	font-size: 0.9rem;
-	font-weight: 700;
-	border: none;
-	border-radius: 3px;
-	padding: 0.3rem 1rem;
-	margin-left: 0.5rem;
-}
-
-.button-default {
-	background: #247ba0;
-	color: #fff;
 }

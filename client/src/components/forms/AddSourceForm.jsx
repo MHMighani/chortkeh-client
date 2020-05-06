@@ -10,13 +10,10 @@ import 'toasted-notes/src/styles.css';
 const AddSourceForm = ({ handleSubmit,addNewSource }) => {
 	const onSubmit = async (formValues) => {
 		const response = await addNewSource(formValues);
-		if(response){
-			toast.notify(() => (
-				<div className="toast warning-toast">این دارایی از قبل ثبت شده است</div>
-			),{
-				duration:2000
-			})
-		}
+		const message = !response?"نام دارایی جدید با موفقیت ثبت شد":"این دارایی قبلا ثبت شده است";
+		toast.notify(() => (
+			<div className={`toast ${!response?"success":"warning"}-toast`}>{message}</div>
+		),{duration:1500})
 	};
 
 	return (
