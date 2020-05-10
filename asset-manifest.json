@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/chortkeh-client/static/css/main.424b8052.chunk.css",
-    "main.js": "/chortkeh-client/static/js/main.4111a1d6.chunk.js",
-    "main.js.map": "/chortkeh-client/static/js/main.4111a1d6.chunk.js.map",
+    "main.js": "/chortkeh-client/static/js/main.d53ed1f4.chunk.js",
+    "main.js.map": "/chortkeh-client/static/js/main.d53ed1f4.chunk.js.map",
     "runtime-main.js": "/chortkeh-client/static/js/runtime-main.22934961.js",
     "runtime-main.js.map": "/chortkeh-client/static/js/runtime-main.22934961.js.map",
     "static/css/2.dc646829.chunk.css": "/chortkeh-client/static/css/2.dc646829.chunk.css",
     "static/js/2.3d8258fb.chunk.js": "/chortkeh-client/static/js/2.3d8258fb.chunk.js",
     "static/js/2.3d8258fb.chunk.js.map": "/chortkeh-client/static/js/2.3d8258fb.chunk.js.map",
     "index.html": "/chortkeh-client/index.html",
-    "precache-manifest.54d1c3062cd3062a2bf89112a1fccfa4.js": "/chortkeh-client/precache-manifest.54d1c3062cd3062a2bf89112a1fccfa4.js",
+    "precache-manifest.460a359ad2ad1ed270e2a6af54a3ae09.js": "/chortkeh-client/precache-manifest.460a359ad2ad1ed270e2a6af54a3ae09.js",
     "service-worker.js": "/chortkeh-client/service-worker.js",
     "static/css/2.dc646829.chunk.css.map": "/chortkeh-client/static/css/2.dc646829.chunk.css.map",
     "static/css/main.424b8052.chunk.css.map": "/chortkeh-client/static/css/main.424b8052.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.dc646829.chunk.css",
     "static/js/2.3d8258fb.chunk.js",
     "static/css/main.424b8052.chunk.css",
-    "static/js/main.4111a1d6.chunk.js"
+    "static/js/main.d53ed1f4.chunk.js"
   ]
 }
