@@ -1,6 +1,6 @@
 import { ADD_TO_INVENTORY, DELETE_FROM_INVENTORY} from '../constants/actionTypes';
 
-export default (state = [], action) => {
+const InventoryReducer = (state = [], action) => {
 	switch (action.type) {
 		case ADD_TO_INVENTORY:
 			const duplicateInventory = state.find(inventory => inventory.subSource === action.payload.subSource);
@@ -23,3 +23,5 @@ export default (state = [], action) => {
 			return state;
 	}
 };
+
+export default InventoryReducer
