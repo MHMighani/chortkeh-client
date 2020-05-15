@@ -2,21 +2,19 @@ import { ADD_SOURCE } from '../constants/actionTypes';
 
 export const inventoryLabels = (state = {}, action) => {
 	let labels = {
-		Gold: ['Gold 18','1 Emami', '1 Old Azadi', '1/2 Azadi', '1/4 Azadi'],
+		Gold: ['Gold 18', '1 Emami', '1 Old Azadi', '1/2 Azadi', '1/4 Azadi'],
 		Currency: ['US Dollar', 'Euro', 'British Pound', 'Canadian Dollar'],
 		Crypto: ['BitCoin'],
 		others: [],
 	};
 
-	if (!Object.keys(state).length) {
-		return { ...state, ...labels };
-	}
-
 	switch (action.type) {
 		case ADD_SOURCE:
 			return { ...state, others: [...state.others, action.payload.newSourceName] };
 		default:
-			return state;
+			let newState = { ...state, ...labels };
+			newState.others = state.others ? state.others : [];
+			return newState;
 	}
 };
 
@@ -38,16 +36,12 @@ export const labelTranslations = (state = {}, action) => {
 		others: 'دیگر منابع',
 	};
 
-	if (!Object.keys(state).length) {
-		return { ...state, ...translations };
-	}
-
 	switch (action.type) {
 		case ADD_SOURCE:
 			const newSource = action.payload.newSourceName;
 
 			return { ...state, [newSource]: newSource };
 		default:
-			return state;
+			return { ...state, ...translations };
 	}
 };
