@@ -17,6 +17,7 @@ const App = () => {
 			<Router history={history}>
 				<Route exact path={process.env.PUBLIC_URL + '/'} component={Inventory} />
 				<Route exact path={process.env.PUBLIC_URL + '/addInventory'} component={AddInventory} />
+				<Route exact path={process.env.PUBLIC_URL + '/editInventory'} component={AddInventory} />
 				<Route exact path={process.env.PUBLIC_URL + '/addSource'} component={AddSourceForm} />
 			</Router>
 		</div>

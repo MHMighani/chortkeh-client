@@ -1,5 +1,6 @@
 import React from 'react';
 import { deleteFromInventory } from '../../actions';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import numberWithCommas from '../../NumberWithCommas';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,9 +8,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const TableBody = (props) => {
 	const tableBody = props.inventory.map((inventory, index) => {
 		const { labelTranslations, todayPrices, deleteFromInventory } = props;
-		const { subSource, amount } = inventory;
+		const { subSource, amount, mainSource } = inventory;
 		const inventoryTodayValue = todayPrices[subSource]['Buy'];
-
+		
 		return (
 			<tr key={index}>
 				<td>{labelTranslations[subSource]}</td>
@@ -23,11 +24,14 @@ const TableBody = (props) => {
 						</span>
 					</button>
 
-					<button className="button success table-edit-btn">
+					<Link className="button success table-edit-btn" to={{
+						pathname: `${process.env.PUBLIC_URL}/editInventory`,
+						initialValue: {mainSource,subSource,amount},
+					}}>
 						<span>
 							<FontAwesomeIcon icon="edit" />
 						</span>
-					</button>
+					</Link>
 				</td>
 			</tr>
 		);
