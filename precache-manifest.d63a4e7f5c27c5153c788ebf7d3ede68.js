@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "55abbdb0b13015c68a3da3bc64dbac9c",
+    "revision": "24668a88cf562c6c60e64fbe1808fd02",
     "url": "/chortkeh-client/index.html"
   },
   {
-    "revision": "223b8d59fa34ff3d145c",
+    "revision": "15316a2b16a49ccbbd9d",
     "url": "/chortkeh-client/static/css/2.dc646829.chunk.css"
   },
   {
-    "revision": "1a85840027b92b9dfd8a",
+    "revision": "d810e610f3abc68b6fcd",
     "url": "/chortkeh-client/static/css/main.424b8052.chunk.css"
   },
   {
-    "revision": "223b8d59fa34ff3d145c",
-    "url": "/chortkeh-client/static/js/2.b50b94b0.chunk.js"
+    "revision": "15316a2b16a49ccbbd9d",
+    "url": "/chortkeh-client/static/js/2.0eb8fce1.chunk.js"
   },
   {
     "revision": "c7e81a35af3dcee82795858d64f8720e",
-    "url": "/chortkeh-client/static/js/2.b50b94b0.chunk.js.LICENSE.txt"
+    "url": "/chortkeh-client/static/js/2.0eb8fce1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1a85840027b92b9dfd8a",
-    "url": "/chortkeh-client/static/js/main.5dd7cb86.chunk.js"
+    "revision": "d810e610f3abc68b6fcd",
+    "url": "/chortkeh-client/static/js/main.bdc5ee03.chunk.js"
   },
   {
     "revision": "458423ea05c168292c91",
