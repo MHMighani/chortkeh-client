@@ -18,7 +18,7 @@
     "mongodb": "^3.5.5",
     "mongoose": "^5.9.4",
     "morgan": "^1.9.1",
-    "validator": "^12.2.0"
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
